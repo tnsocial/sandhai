@@ -1,0 +1,21 @@
+<div class="container" style="margin-top: 20px;">
+  <div class="card">
+    <div class="card-header"><h5> Select District: </h5></div>
+    <div class="card-body">
+
+      <!--<div class="list-group">
+        <a href="#" class="list-group-item">
+          Dhindugal
+        </a>
+        <a [routerLink]="['/marketlist','111']" class="list-group-item list-group-item-action">Thanjavur</a>
+        <a href="#" class="list-group-item list-group-item-action">Vizhupuram</a>
+        <a href="#" class="list-group-item list-group-item-action">Chennai</a>
+        <a href="#" class="list-group-item list-group-item-action disabled">Thirunalveli</a>
+      </div>-->
+      <div class="list-group">
+        <a [routerLink]="['/marketlist',district.name]" class="list-group-item list-group-item-action" *ngFor="let district of getSandhaiList()" >{{district.name}}</a>
+      </div>
+
+    </div>
+  </div>
+</div>
