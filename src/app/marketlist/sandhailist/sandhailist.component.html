@@ -5,14 +5,14 @@
       <div *ngFor="let dummy of getSandhaiList(); let i = index; let even = even;">
 
 
-          <div class="row" *ngIf="even" style="margin-bottom: 15px;">
-            <div class="col-sm-6" *ngFor="let sandhaiItem of getSandhaiTempList(i)">
+          <div class="row" *ngIf="even" >
+            <div class="col-sm-6" *ngFor="let sandhaiItem of getSandhaiTempList(i)" style="margin-bottom: 15px;">
               <div class="card">
                 <div class="card-header">
-                  {{sandhaiItem.name}}
+                  <h5>{{sandhaiItem.name}}</h5>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title">Address</h5>
+                  <h6 class="card-title">Address</h6>
                   <p class="card-text">
                     {{sandhaiItem.fullPostalAddr.address1}}<br/>
                     {{sandhaiItem.fullPostalAddr.address2}}<br/>
@@ -21,7 +21,7 @@
                   </p>
                 </div>
                 <div class="card-footer">
-                  <h5>Contact</h5>
+                  <h6>Contact</h6>
                   {{sandhaiItem.contact.name}}<br/>
                   {{sandhaiItem.contact.designation}}<br/>
                   {{sandhaiItem.contact.contactNumber}}<br/>
